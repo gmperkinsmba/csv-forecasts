@@ -1,8 +1,8 @@
-# TimesFM Forecast Studio
+# CSV Forecasts
 
 First principle: Compare every forecast with a simple baseline, using only data available before its test window.
 
-TimesFM Forecast Studio imports time-series CSVs, checks data quality, runs rolling-origin backtests, and exports a PDF report. Its installed Mac app starts and stops its local server with the window.
+CSV Forecasts imports time-series CSVs, checks data quality, runs rolling-origin backtests, and exports `csv-forecasts-report.pdf`. Its installed Mac app starts and stops its local server with the window.
 
 ## Install and run the Mac app
 
@@ -15,7 +15,7 @@ python3.12 -m venv .desktop-venv
 .desktop-venv/bin/python install_desktop.py
 ```
 
-Open `~/Applications/TimesFM Forecast Studio.app` from Finder. Close the window or press Command-Q to stop the app and its local listener. To uninstall, move that app to Trash. The installer preserves a previous owned copy beside the replacement and refuses to replace an unrelated app.
+Open `~/Applications/CSV Forecasts.app` from Finder. Close the window or press Command-Q to stop the app and its local listener. To uninstall, move that app to Trash. The installer preserves a previous owned copy beside the replacement and refuses to replace an unrelated app.
 
 PyInstaller applies an ad-hoc signature. The app has no Apple Developer ID signature and is not notarized. macOS may ask you to approve opening it.
 
