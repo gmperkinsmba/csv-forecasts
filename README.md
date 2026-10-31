@@ -6,7 +6,7 @@ CSV Forecasts imports time-series CSVs, checks data quality, runs rolling-origin
 
 ## Install and run the Mac app
 
-This build targets macOS. Python 3.12 is used for the local build environment.
+This build targets macOS 14 or later on Apple silicon. Python 3.12 is used for the local build environment because the pinned PyTorch wheel requires it.
 
 ```sh
 python3.12 -m venv .desktop-venv
