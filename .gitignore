@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.desktop-venv/
+venv/
+.env
+*.db
+*.sqlite*
+uploads/
+exports/
+secrets/
+runtime/
+build/
+dist/
+*.app/
+*.spec
+graphify-out/

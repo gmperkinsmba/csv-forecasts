@@ -1,0 +1,3 @@
+TimesFM Forecast Studio desktop bundle
+io.github.gmperkinsmba.timesfm-forecast-studio
+local-build-owner-marker-v1
