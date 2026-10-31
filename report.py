@@ -26,7 +26,7 @@ def make_report(payload):
         leftMargin=0.62 * inch,
         topMargin=0.6 * inch,
         bottomMargin=0.6 * inch,
-        title="Forecast Studio report",
+        title="CSV Forecasts report",
     )
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name="Sub", parent=styles["Normal"], textColor=colors.HexColor("#556577"), fontSize=9, leading=13))
@@ -36,7 +36,7 @@ def make_report(payload):
     styles["Heading2"].fontSize = 16
 
     story = [
-        Paragraph("FORECAST STUDIO / ANALYSIS", styles["Kicker"]),
+        Paragraph("CSV FORECASTS / ANALYSIS", styles["Kicker"]),
         Paragraph("Forecast and backtest report", styles["Title"]),
         Paragraph("Prepared " + datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"), styles["Sub"]),
         Spacer(1, 12),
@@ -162,7 +162,7 @@ def make_report(payload):
         canvas.line(0.62 * inch, 0.45 * inch, 7.88 * inch, 0.45 * inch)
         canvas.setFont("Helvetica", 8)
         canvas.setFillColor(colors.HexColor("#556577"))
-        canvas.drawString(0.62 * inch, 0.29 * inch, "TimesFM Forecast Studio · forecast comparison")
+        canvas.drawString(0.62 * inch, 0.29 * inch, "CSV Forecasts · forecast comparison")
         canvas.drawRightString(7.88 * inch, 0.29 * inch, f"{document.page}")
         canvas.restoreState()
 

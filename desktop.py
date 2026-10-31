@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Native macOS shell for TimesFM Forecast Studio."""
+"""Native macOS shell for CSV Forecasts."""
 from __future__ import annotations
 
 import threading
@@ -25,7 +25,7 @@ def run() -> None:
     try:
         install_policy(f"http://127.0.0.1:{server.server_port}/")
         window = webview.create_window(
-            "TimesFM Forecast Studio",
+            "CSV Forecasts",
             url,
             width=1080,
             height=760,
@@ -46,8 +46,8 @@ if __name__ == "__main__":
         import AppKit
 
         alert = AppKit.NSAlert.alloc().init()
-        alert.setMessageText_("TimesFM Forecast Studio could not start")
-        alert.setInformativeText_("The local app failed to open. Restart TimesFM Forecast Studio and try again.")
+        alert.setMessageText_("CSV Forecasts could not start")
+        alert.setInformativeText_("The local app failed to open. Restart CSV Forecasts and try again.")
         alert.addButtonWithTitle_("OK")
         alert.runModal()
         raise SystemExit(1)

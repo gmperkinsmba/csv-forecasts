@@ -116,7 +116,7 @@ class Handler(BaseHTTPRequestHandler):
                     pdf = make_report(result)
                     self.send_response(200)
                     self.send_header("Content-Type", "application/pdf")
-                    self.send_header("Content-Disposition", "attachment; filename=forecast-report.pdf")
+                    self.send_header("Content-Disposition", "attachment; filename=csv-forecasts-report.pdf")
                     self.send_header("Content-Length", str(len(pdf)))
                     self.end_headers()
                     self.wfile.write(pdf)
@@ -157,5 +157,5 @@ def _cad(x):
     return f"{x/60:.1f} minutes"
 if __name__ == "__main__":
     server = make_server()
-    print(f"TimesFM Forecast Studio at http://127.0.0.1:{server.server_port}")
+    print(f"CSV Forecasts at http://127.0.0.1:{server.server_port}")
     server.serve_forever()
